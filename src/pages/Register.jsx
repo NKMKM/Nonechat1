@@ -30,7 +30,6 @@ export default function Register() {
 
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value });
-    this.setState({ value: event.target.value.replace(/[^\w\s]/gi, "") });
   };
 
   const handleValidation = () => {
@@ -102,7 +101,6 @@ export default function Register() {
             type="text"
             placeholder="Username"
             name="username"
-            value={this.state.value}
             onChange={(e) => handleChange(e)
             }
           />
@@ -110,7 +108,6 @@ export default function Register() {
             type="email"
             placeholder="Email"
             name="email"
-            value={this.state.value}
             onChange={(e) => handleChange(e)
             }
           />
@@ -118,7 +115,6 @@ export default function Register() {
             type="password"
             placeholder="Password"
             name="password"
-            value={this.state.value}
             onChange={(e) => handleChange(e)
             }
           />
@@ -126,7 +122,6 @@ export default function Register() {
             type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
-            value={this.state.value}
             onChange={(e) => handleChange(e)
 }
           />
