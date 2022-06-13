@@ -22,7 +22,7 @@ export default function Register() {
     password: "",
     confirmPassword: "",
   });
-
+const emailRegExp = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$ ";
   useEffect(() => {
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
       navigate("/setAvatar");
@@ -41,9 +41,15 @@ export default function Register() {
         toastOptions
       );
       return false;
-    } else if (username.length > 12) {
+    }else if (username.length > 12) {
       toast.error(
         "Username shouldn't be more than 12 characters.",
+        toastOptions
+      );
+      return false;
+    } else if (username = emailRegExp) {
+      toast.error(
+        "Your nickname must not contain characters",
         toastOptions
       );
       return false;
