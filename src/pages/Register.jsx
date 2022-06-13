@@ -101,7 +101,7 @@ export default function Register() {
             type="text"
             placeholder="Username"
             name="username"
-            pattern="{3}"
+            
             onChange={(e) => handleChange(e)
             }
           />
