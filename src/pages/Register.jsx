@@ -43,7 +43,7 @@ export default function Register() {
       return false;
     } else if (username.length > 12) {
       toast.error(
-        "Username should be more than 12 characters.",
+        "Username shouldn't be more than 12 characters.",
         toastOptions
       );
       return false;
