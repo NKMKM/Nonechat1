@@ -109,7 +109,6 @@ export default function Register() {
             type="email"
             placeholder="Email"
             name="email"
-            pattern="[A-Za-z]{3}"
             onChange={(e) => handleChange(e)
             }
           />
@@ -117,14 +116,12 @@ export default function Register() {
             type="password"
             placeholder="Password"
             name="password"
-            pattern="[A-Za-z]{3}"
             onChange={(e) => handleChange(e)
             }
           />
           <input
             type="password"
             placeholder="Confirm Password"
-            pattern="[A-Za-z]{3}"
             name="confirmPassword"
             onChange={(e) => handleChange(e)
 }
