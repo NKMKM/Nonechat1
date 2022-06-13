@@ -101,7 +101,7 @@ export default function Register() {
             type="text"
             placeholder="Username"
             name="username"
-            pattern="[A-Za-z]{3}"
+            pattern="{3}"
             onChange={(e) => handleChange(e)
             }
           />
