@@ -22,10 +22,10 @@ export default function SetAvatar() {
   };
 
   useEffect( () => {
-    (async function {
+    (async function (){
     if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))
       navigate("/login");
-    })
+    })();
   }, []);
 
   const setProfilePicture = async () => {
