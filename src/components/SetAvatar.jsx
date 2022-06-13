@@ -25,8 +25,8 @@ export default function SetAvatar() {
     (async function {
     if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))
       navigate("/login");
-  }
-            }), []);
+    })
+  }, []);
 
   const setProfilePicture = async () => {
     if (selectedAvatar === undefined) {
