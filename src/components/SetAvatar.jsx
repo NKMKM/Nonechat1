@@ -55,7 +55,7 @@ export default function SetAvatar() {
   };
 
   useEffect( () => {
-    (async funtion {
+    (async function (){
     const data = [];
     for (let i = 0; i < 4; i++) {
       const image = await axios.get(
@@ -67,7 +67,7 @@ export default function SetAvatar() {
     setAvatars(data);
     setIsLoading(false);
   }
-            }), []);
+            })(), []);
   return (
     <>
       {isLoading ? (
