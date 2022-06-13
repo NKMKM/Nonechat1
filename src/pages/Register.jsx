@@ -22,7 +22,6 @@ export default function Register() {
     password: "",
     confirmPassword: "",
   });
-const emailRegExp = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$ ";
   useEffect(() => {
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
       navigate("/setAvatar");
@@ -47,13 +46,7 @@ const emailRegExp = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
         toastOptions
       );
       return false;
-    } else if (username = emailRegExp) {
-      toast.error(
-        "Your nickname must not contain characters",
-        toastOptions
-      );
-      return false;
-    } else if (username.length < 3) {
+    }else if (username.length < 3) {
       toast.error(
         "Username should be greater than 3 characters.",
         toastOptions
@@ -108,25 +101,30 @@ const emailRegExp = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
             type="text"
             placeholder="Username"
             name="username"
-            onChange={(e) => handleChange(e)}
+            onChange={(e) => handleChange(e)
+onkeyup="this.value = this.value.replace(/[^\d]/g,'');"}
           />
           <input
             type="email"
             placeholder="Email"
             name="email"
-            onChange={(e) => handleChange(e)}
+            onChange={(e) => handleChange(e)
+onkeyup="this.value = this.value.replace(/[^\d]/g,'');"}
           />
           <input
             type="password"
             placeholder="Password"
             name="password"
-            onChange={(e) => handleChange(e)}
+            onChange={(e) => handleChange(e)
+onkeyup="this.value = this.value.replace(/[^\d]/g,'');"}
           />
           <input
             type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
-            onChange={(e) => handleChange(e)}
+            onChange={(e) => handleChange(e)
+onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+}
           />
           <button type="submit">Create User</button>
           <span>
