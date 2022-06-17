@@ -8,9 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { registerRoute } from "../utils/APIRoutes";
 
 export default function Register() {
-  if (typeof browser === "undefined") {
-    var browser = chrome;
-}
+ 
   const navigate = useNavigate();
   const toastOptions = {
     position: "bottom-right",
