@@ -23,7 +23,7 @@ export default function Contacts({ contacts, changeChat }) {
     <>
       {currentUserImage && currentUserImage && (
         <Container>
-          <div className="brand">
+          <div className="brand" class="noselect">
             <img src={Logo} alt="logo" />
             <h3>ONECHAT</h3>
           </div>
@@ -43,14 +43,14 @@ export default function Contacts({ contacts, changeChat }) {
                       alt=""
                     />
                   </div>
-                  <div className="username">
+                  <div className="username" class="noselect">
                     <h3>{contact.username}</h3>
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="current-user">
+          <div className="current-user" class="noselect">
             <div className="avatar">
               <img
                 src={`data:image/svg+xml;base64,${currentUserImage}`}
@@ -67,6 +67,7 @@ export default function Contacts({ contacts, changeChat }) {
   );
 }
 const Container = styled.div`
+                
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
@@ -98,6 +99,14 @@ const Container = styled.div`
         border-radius: 1rem;
       }
     }
+    .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
     .contact {
       background-color:#380770;
       min-height: 5rem;
