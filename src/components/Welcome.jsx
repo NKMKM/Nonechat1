@@ -13,13 +13,13 @@ export default function Welcome() {
       })();
   }, []);
   return (
-    <Logout />
     <Container>
       <h1 class="noselect">
         Welcome to the club <span>{userName}!</span>
       </h1>
-      <h3 class="noselect">Please choose a chat to Start messaging.</h3>
+      <h3 class="noselect" >Please choose a chat to Start messaging.</h3>
     </Container>
+    <Logout />
   );
 }
 
