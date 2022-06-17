@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Logout from "./Logout";
 import styled from "styled-components";
 export default function Welcome() {
   const [userName, setUserName] = useState("");
