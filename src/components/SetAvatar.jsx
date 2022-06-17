@@ -71,18 +71,18 @@ export default function SetAvatar() {
   return (
     <>
       {isLoading ? (
-        <Container class="noselect">
+        <Container >
           <img src={loader} alt="loader" className="loader" />
         </Container>
       ) : (
         <Container>
-          <div className="title-container"  class="noselect">
+          <div className="title-container"  >
             <h1>Pick an Avatar as your profile picture</h1>
           </div>
           <div className="avatars" class="noselect">
             {avatars.map((avatar, index) => {
               return (
-                <div  class="noselect"
+                <div  
                   className={`avatar ${
                     selectedAvatar === index ? "selected" : ""
                   }`} >
@@ -160,12 +160,5 @@ const Container = styled.div`
       background-color: #4e0eff;
     }
   }
-  .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  
 `;
