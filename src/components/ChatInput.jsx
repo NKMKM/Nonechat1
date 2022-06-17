@@ -34,7 +34,7 @@ export default function ChatInput({ handleSendMsg }) {
         </div>
       </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
-        <input class="noselect"
+        <input 
           type="text"
           placeholder="type your message here"
           onChange={(e) => setMsg(e.target.value)}
@@ -141,12 +141,4 @@ const Container = styled.div`
       }
     }
   }
-  .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
 `;
