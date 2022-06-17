@@ -24,6 +24,7 @@ return(
   );
 </div>
     </Container>
+  );
 return(
     <Logout />
   );
