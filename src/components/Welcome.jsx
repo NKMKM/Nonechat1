@@ -14,7 +14,7 @@ export default function Welcome() {
   }, []);
   return (
     <Logout />
-    <Container >
+    <Container>
       <h1 class="noselect">
         Welcome to the club <span>{userName}!</span>
       </h1>
