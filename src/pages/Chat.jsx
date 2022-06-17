@@ -9,9 +9,7 @@ import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
 
 export default function Chat() {
-if (typeof browser === "undefined") {
-    var browser = chrome;
-}  
+
   const navigate = useNavigate();
   const socket = useRef();
   const [contacts, setContacts] = useState([]);
