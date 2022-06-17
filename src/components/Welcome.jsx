@@ -28,7 +28,6 @@ return(
 return(
     <Logout />
   );
-  );
 }
 
 const Container = styled.div`
