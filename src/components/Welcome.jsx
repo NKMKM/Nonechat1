@@ -18,9 +18,7 @@ export default function Welcome() {
       </h1>
       <h3>Please choose a chat to Start messaging.</h3>
     </Container>
-<Container>
-<Logout />
-</Container>
+);
 }
 
 const Container = styled.div`
