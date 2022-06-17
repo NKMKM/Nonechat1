@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Logout from "./Logout";
 import styled from "styled-components";
 export default function Welcome() {
   const [userName, setUserName] = useState("");
@@ -14,10 +13,10 @@ export default function Welcome() {
   }, []);
   return (
     <Container>
-      <h1 class="noselect">
+      <h1 >
         Welcome to the club <span>{userName}!</span>
       </h1>
-      <h3 class="noselect" >Please choose a chat to Start messaging.</h3>
+      <h3>Please choose a chat to Start messaging.</h3>
     </Container>
 <Container>
 <Logout />
@@ -36,12 +35,4 @@ const Container = styled.div`
   span {
     color: #4e0eff;
   }
- .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
 `;
