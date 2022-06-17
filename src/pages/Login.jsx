@@ -8,6 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { loginRoute } from "../utils/APIRoutes";
 
 export default function Login() {
+  if (typeof browser === "undefined") {
+    var browser = chrome;
+}
   const navigate = useNavigate();
   const [values, setValues] = useState({ username: "", password: "" });
   const toastOptions = {
