@@ -13,6 +13,7 @@ export default function Welcome() {
       })();
   }, []);
   return (
+    <Logout />
     <Container>
       <h1>
         Welcome to the club <span>{userName}!</span>
