@@ -19,7 +19,9 @@ export default function Welcome() {
       </h1>
       <h3 class="noselect" >Please choose a chat to Start messaging.</h3>
     </Container>
+return(
     <Logout />
+  );
   );
 }
 
