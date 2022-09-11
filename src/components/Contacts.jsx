@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/logo.png";
 export default function Contacts({ contacts, changeChat }) {
- 
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
   useEffect(() => {
@@ -10,7 +9,6 @@ export default function Contacts({ contacts, changeChat }) {
     const data = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
-    ;
     setCurrentUserImage(data.avatarImage);
     })();
   }, []);
@@ -24,7 +22,7 @@ export default function Contacts({ contacts, changeChat }) {
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h3>ONECHAT</h3>
+            <h10>ONECHAT</h10>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
@@ -43,7 +41,7 @@ export default function Contacts({ contacts, changeChat }) {
                     />
                   </div>
                   <div className="username">
-                    
+                    <h3></h3>
                   </div>
                 </div>
               );
@@ -57,6 +55,7 @@ export default function Contacts({ contacts, changeChat }) {
               />
             </div>
             <div className="username">
+              <h2></h2>
             </div>
           </div>
         </Container>
@@ -72,15 +71,15 @@ const Container = styled.div`
   .brand {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.1rem;
     justify-content: center;
     img {
-      height: 2rem;
+      height: 1.1rem;
     }
-    h3 {
+    h10 {
       color: white;
       text-transform: uppercase;
-    }
+      }
   }
   .contacts {
     display: flex;
@@ -98,7 +97,7 @@ const Container = styled.div`
     }
     .contact {
       background-color:#380770;
-      min-height: 5rem;
+      min-height: 1.2rem;
 cursor: pointer;
       width: 90%;
       border-radius: 0.2rem;
@@ -127,10 +126,10 @@ cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     .avatar {
       img {
-        height: 4rem;
+        height: 3rem;
         max-inline-size: 100%;
       }
     }
@@ -139,8 +138,8 @@ cursor: pointer;
         color: white;
       }
     }
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-      gap: 0.5rem;
+    @media screen and (min-width: 100px) and (max-width: 1080px) {
+      gap: 0.7rem;
       .username {
         h2 {
           font-size: 1rem;
