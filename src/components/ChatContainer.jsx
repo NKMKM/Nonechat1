@@ -142,10 +142,10 @@ const Container = styled.div`
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
     overflow: auto;
     &::-webkit-scrollbar {
-      width: 0.2rem;
+      width: 0.4rem;
       &-thumb {
         background-color: #4361EE;
         width: 0.1rem;
@@ -158,11 +158,11 @@ const Container = styled.div`
       .content {
         max-width: 40%;
         overflow-wrap: break-word;
-        padding: 1rem;
+        padding: 0.5rem;
         font-size: 1.1rem;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         color: #d1d1d1;
-        @media screen and (min-width: 720px) and (max-width: 1080px) {
+        @media screen and (min-width: 50px) and (max-width: 1080px) {
           max-width: 70%;
         }
       }
