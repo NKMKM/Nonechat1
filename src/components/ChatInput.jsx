@@ -54,7 +54,7 @@ const Container = styled.div`
   grid-template-columns: 5% 95%;
   background-color: #080420;
   padding: 0 2rem;
-  @media screen and (min-width: 720px) and (max-width: 1080px) {
+  @media screen and (min-width: 100px) and (max-width: 1080px) {
     padding: 0 1rem;
     gap: 1rem;
   }
@@ -103,15 +103,15 @@ const Container = styled.div`
     border-radius: 2rem;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     background-color: #3A0CA3;
     input {
-      width: 90%;
-      height: 60%;
+      width: 100%;
+      height: 100%;
       background-color: transparent;
       color: white;
       border: none;
-      padding-left: 1rem;
+      padding-left: 1.1rem;
       font-size: 1.2rem;
 
       &::selection {
@@ -129,7 +129,7 @@ const Container = styled.div`
       align-items: center;
       background-color: #F72585;
       border: none;
-      @media screen and (min-width: 720px) and (max-width: 1080px) {
+      @media screen and (min-width: 90px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;
         svg {
           font-size: 1rem;
